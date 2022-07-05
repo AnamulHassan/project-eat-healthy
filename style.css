@@ -7,6 +7,9 @@
   --orange--shade4: #975a2d;
   --orange--tint1: #feeadb;
   --black--tint1: #676767;
+  --gray--tint1: #495057;
+  --gary--tint2: #868e96;
+  --gary--tint3: #adb5bd;
 }
 
 * {
@@ -36,10 +39,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-.section-1 {
-}
 .description-box {
-  /* border: 1px solid black; */
   margin-left: 3rem;
 }
 .header {
@@ -47,6 +47,7 @@ body {
   letter-spacing: -1.5px;
   line-height: 8rem;
   margin-bottom: 2rem;
+  color: var(--gray--tint1);
 }
 .header::first-letter {
   font-size: 9rem;
@@ -54,9 +55,11 @@ body {
 }
 .color {
   color: var(--orange--shade1);
+  font-size: 500;
 }
 .text {
   font-size: 2rem;
+  color: var(--gary--tint2);
 }
 .btn:link,
 .btn:visited {
@@ -78,8 +81,6 @@ body {
 .btn:hover,
 .btn:active {
   transform: translateY(5%);
-}
-.img-box {
 }
 .img {
   width: 95%;
@@ -104,8 +105,8 @@ body {
   font-size: 6rem;
   color: var(--orange--shade2);
   left: 50%;
-  top: 90%;
-  transform: translateX(-50%);
+  top: 100%;
+  transform: translate(-50%, -50%);
   text-transform: uppercase;
   letter-spacing: -1.5px;
   padding: 0rem 3rem;
@@ -113,9 +114,168 @@ body {
   border-bottom-right-radius: 3rem;
   background-color: var(--orange--tint1);
 }
+.about-owner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7rem;
+  margin: 1rem 4rem;
+}
 .owner-text {
-  color: var(--orange--shade4);
-  font-size: 2rem;
-  padding: 5rem 5rem;
+  color: var(--gary--tint2);
+  font-size: 1.8rem;
+  padding-top: 7rem;
   text-align: center;
+}
+/* --------------- GALLERY SECTION --------------- */
+.gallery-title {
+  margin: 1px 5rem;
+  text-align: center;
+  font-size: 7rem;
+  color: var(--orange--shade2);
+  text-transform: uppercase;
+  padding: 0rem 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  background-color: var(--orange--tint1);
+}
+.gallery-img-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 5rem;
+}
+.img-food {
+  overflow: hidden;
+  border-radius: 2rem;
+}
+.img-food img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+.img-food img:hover {
+  transform: scale(1.1);
+}
+
+/* --------------- CART SECTION --------------- */
+.section-4 {
+  margin-bottom: 10rem;
+}
+.cart-title {
+  margin: 1rem 0;
+  font-size: 7rem;
+  color: var(--orange--shade2);
+  letter-spacing: -0.8px;
+}
+.cart-title::first-letter {
+  font-size: 9rem;
+  font-weight: 700;
+}
+.cart-box {
+  display: flex;
+  margin: 0 5rem;
+}
+.cart-items {
+  padding: 1.5rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 3rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in;
+}
+.cart-items:hover {
+  box-shadow: 0px 0px 3rem rgba(0, 0, 0, 0.2);
+}
+.cart-items img {
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-bottom: 1rem;
+}
+.meal-title {
+  list-style: none;
+  font-size: 3.5rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.meal-price {
+  list-style: none;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.meal-price span {
+  text-decoration: line-through;
+  opacity: 0.3;
+  margin-left: 1rem;
+}
+.star-icons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.star-icon {
+  font-size: 2.5rem;
+  color: var(--orange--shade3);
+  padding-right: 0.5rem;
+}
+.serving-number {
+  display: inline;
+  font-family: inherit;
+  font-size: 3rem;
+  width: 8rem;
+  height: 6rem;
+  margin-left: 2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--orange--shade1);
+}
+.btn-cart {
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 3rem rgba(0, 0, 0, 0.1);
+  margin: 4rem 7rem;
+  border-radius: 2rem;
+  padding: 5rem 0;
+}
+.rating-item li {
+  list-style: none;
+}
+.rating-number {
+  font-size: 5rem;
+  font-weight: 700;
+}
+.rating-source {
+  font-size: 2rem;
+  color: var(--gray--tint1);
+  font-weight: 500;
+}
+
+/* --------------- FOOTER --------------- */
+.footer {
+  background-color: #051422;
+  height: 20rem;
+}
+.footer-title {
+  padding-top: 3rem;
+  color: var(--orange--shade1);
+  font-size: 4rem;
+  text-align: center;
+}
+#gray {
+  color: #868e96;
+}
+.footer-text {
+  padding-top: 2rem;
+  color: #adb5bd;
+  text-align: center;
+  font-size: 1.6rem;
 }
