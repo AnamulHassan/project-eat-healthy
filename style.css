@@ -4,6 +4,8 @@
   --orange--shade1: #fc8b47;
   --orange--shade2: #fb964b;
   --orange--shade3: #fe4a2e;
+  --orange--shade4: #975a2d;
+  --orange--tint1: #feeadb;
   --black--tint1: #676767;
 }
 
@@ -18,6 +20,7 @@ html {
 body {
   font-family: 'Heebo', sans-serif;
 }
+/* ---------------REUSEABLE GRID --------------- */
 .container {
   display: grid;
   align-items: center;
@@ -28,6 +31,7 @@ body {
   border: 0.1rem solid green;
   margin: 0 auto;
 }
+/* --------------- HERO SECTION --------------- */
 .container-main {
   height: 100vh;
   overflow-x: hidden;
@@ -79,4 +83,39 @@ body {
 }
 .img {
   width: 95%;
+}
+/* --------------- OWNER SECTION --------------- */
+.img-box-owner {
+  height: 70vh;
+  position: relative;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(235, 151, 78, 0.15),
+      rgba(230, 125, 34, 0.25)
+    ),
+    url(img/chef/chef.jpg);
+  z-index: 3;
+  /* background-position: cent; */
+  background-size: cover;
+}
+.about-us {
+  position: absolute;
+  z-index: 2;
+  font-size: 6rem;
+  color: var(--orange--shade2);
+  left: 50%;
+  top: 90%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  letter-spacing: -1.5px;
+  padding: 0rem 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  background-color: var(--orange--tint1);
+}
+.owner-text {
+  color: var(--orange--shade4);
+  font-size: 2rem;
+  padding: 5rem 5rem;
+  text-align: center;
 }
