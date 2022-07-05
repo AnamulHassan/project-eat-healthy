@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;400;600;700&display=swap');
+
+:root {
+  --orange--shade1: #fc8b47;
+  --orange--shade2: #fb964b;
+  --orange--shade3: #fe4a2e;
+  --black--tint1: #676767;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Heebo', sans-serif;
+}
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  grid-template-columns: repeat(2, 1fr);
+  border: 0.1rem solid green;
+  margin: 0 auto;
+}
+.container-main {
+  height: 100vh;
+  overflow-x: hidden;
+}
+.section-1 {
+}
+.description-box {
+  /* border: 1px solid black; */
+  margin-left: 3rem;
+}
+.header {
+  font-size: 7rem;
+  letter-spacing: -1.5px;
+  line-height: 8rem;
+  margin-bottom: 2rem;
+}
+.header::first-letter {
+  font-size: 9rem;
+  font-weight: 700;
+}
+.color {
+  color: var(--orange--shade1);
+}
+.text {
+  font-size: 2rem;
+}
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  border: none;
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 2.2rem;
+  background-image: linear-gradient(to right, #fb964b, #fe4a2e);
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  box-shadow: 0px 0px 3rem #fdc093;
+  transform: translateY(0%);
+  transition: transform 0.2s ease-in;
+}
+.btn:hover,
+.btn:active {
+  transform: translateY(5%);
+}
+.img-box {
+}
+.img {
+  width: 95%;
+}
