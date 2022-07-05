@@ -23,7 +23,21 @@ html {
 body {
   font-family: 'Heebo', sans-serif;
 }
-/* ---------------REUSEABLE GRID --------------- */
+.section-main {
+  transition: transform 1s, opacity 1s;
+}
+.section-hidden:nth-child(even) {
+  opacity: 0;
+  transform: translateX(-8rem);
+}
+.section-hidden:nth-child(odd) {
+  opacity: 0;
+  transform: translateX(8rem);
+}
+.section-hidden:last-child {
+  transform: translateY(-10rem);
+}
+/* --------------- HERO SECTION --------------- */
 .container {
   display: grid;
   align-items: center;
@@ -33,12 +47,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
   border: 0.1rem solid green;
   margin: 0 auto;
-}
-/* --------------- HERO SECTION --------------- */
-.container-main {
   height: 100vh;
   overflow-x: hidden;
 }
+
 .description-box {
   margin-left: 3rem;
 }
